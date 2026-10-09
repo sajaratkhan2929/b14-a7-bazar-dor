@@ -1,4 +1,4 @@
-
+import ProductSections from "@/components/product-sections";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -162,9 +162,7 @@ export default function Home() {
       </h1>
 
       <p className="mt-4 max-w-[520px] text-sm leading-6 text-[#788078]">
-        চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলার দাম —
-        বাজারভিত্তিক বিস্তৃত, সঠিক, সর্বশেষ-সার্বিক এবং দামের
-        পরিবর্তন এক জায়গায়।
+        চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলার দাম — বাজারভিত্তিক বিস্তারিত, গড়, সর্বনিম্ন-সর্বাধিক এবং দামের পরিবর্তন এক জায়গায়।
       </p>
 
       <Link
@@ -187,7 +185,11 @@ export default function Home() {
       />
     </div>
   </div>
+
 </section>
+
+<ProductSections />
+
     </main>
   );
 }
