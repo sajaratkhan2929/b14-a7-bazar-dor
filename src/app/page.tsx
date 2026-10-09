@@ -149,8 +149,8 @@ export default function Home() {
 
      
 {/* Hero Section */}
-<section className="bg-[#f0f5f0] px-4 py-5 sm:px-8">
-  <div className="mx-auto grid max-w-[994px] grid-cols-1 items-center gap-5 overflow-hidden rounded-[22px] border border-[#dfe8df] bg-[#fbfcfa] px-5 py-6 sm:grid-cols-[1fr_240px] sm:px-7 sm:py-5">
+<section className="bg-[#f0f5f0] px-4 py-8 sm:px-10">
+  <div className="mx-auto grid max-w-[994px] grid-cols-1 items-center gap-5 overflow-hidden rounded-[22px] border border-[#dfe8df] bg-[#fbfcfa] px-4 py-6 sm:grid-cols-[1fr_240px] sm:px-7 sm:py-5">
     {/* Left Content */}
     <div className="relative z-10">
       <span className="inline-flex rounded-full bg-[#e0f2e5] px-3 py-1 text-xs font-semibold text-[#168344]">
@@ -165,12 +165,7 @@ export default function Home() {
         চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলার দাম — বাজারভিত্তিক বিস্তারিত, গড়, সর্বনিম্ন-সর্বাধিক এবং দামের পরিবর্তন এক জায়গায়।
       </p>
 
-      <Link
-        href="#products"
-        className="mt-6 inline-flex items-center justify-center rounded-lg bg-[#078b43] px-5 py-3 text-xs font-bold text-white shadow-md shadow-green-900/15 transition hover:bg-[#067638]"
-      >
-        সব পণ্য দেখুন
-      </Link>
+      
     </div>
 
     {/* Hero Image */}
@@ -185,11 +180,8 @@ export default function Home() {
       />
     </div>
   </div>
-
 </section>
-
-<ProductSections />
-
+ <ProductSections />
     </main>
   );
 }

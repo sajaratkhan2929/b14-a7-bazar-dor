@@ -126,12 +126,7 @@ export default async function ProductSections() {
               </p>
             </div>
 
-            <Link
-              href="#products"
-              className="shrink-0 text-sm font-semibold text-[#078b43] hover:underline"
-            >
-              সব পণ্য দেখুন →
-            </Link>
+            
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-3">
@@ -148,7 +143,7 @@ export default async function ProductSections() {
             সব পণ্য
           </h2>
           <p className="mt-1 text-sm text-gray-500">
-           মোট ৩৩টি পণ্য দেখানো হচ্ছে
+            মোট ৩৩টি পণ্য দেখানো হচ্ছে
           </p>
         </div>
 
