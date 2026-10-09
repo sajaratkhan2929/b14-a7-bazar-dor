@@ -32,11 +32,7 @@ function MarketTicker() {
       <div className="ticker-track flex w-max items-center">
         {[0, 1].map((copy) => (
           <div key={copy} className="flex shrink-0 items-center">
-            <div className="flex items-center gap-3 px-6 py-3 text-sm font-bold text-[#276b3e]">
-              <span className="h-2.5 w-2.5 rounded-full bg-[#65b86d]" />
-              সর্বশেষ দাম
-            </div>
-
+           
             {marketUpdates.map((item) => (
               <div
                 key={`${copy}-${item.name}`}
@@ -76,7 +72,7 @@ export default function Home() {
             {/* Green circular logo with your cart image */}
             <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-[#078b43] p-2 shadow-sm sm:h-14 sm:w-14">
               <Image
-                src="/images/bazar-hero.png"
+                src="/images/logo-icon.png"
                 alt="BazarDor cart logo"
                 width={48}
                 height={48}
