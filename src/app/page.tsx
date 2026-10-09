@@ -147,10 +147,47 @@ export default function Home() {
       {/* Scrolling Market Price Ticker */}
       <MarketTicker />
 
-      {/* Blank area for the next homepage section */}
-      <section className="mx-auto min-h-[400px] max-w-[1440px] px-5 py-10 sm:px-8">
-        {/* We will build the hero section here next. */}
-      </section>
+     
+{/* Hero Section */}
+<section className="bg-[#f0f5f0] px-4 py-5 sm:px-8">
+  <div className="mx-auto grid max-w-[994px] grid-cols-1 items-center gap-5 overflow-hidden rounded-[22px] border border-[#dfe8df] bg-[#fbfcfa] px-5 py-6 sm:grid-cols-[1fr_240px] sm:px-7 sm:py-5">
+    {/* Left Content */}
+    <div className="relative z-10">
+      <span className="inline-flex rounded-full bg-[#e0f2e5] px-3 py-1 text-xs font-semibold text-[#168344]">
+        শনিবার, ১০ অক্টোবর, ২০২৬
+      </span>
+
+      <h1 className="mt-3 text-2xl leading-tight font-extrabold tracking-tight text-[#26342b] sm:text-[32px]">
+        আজকের বাজারের দাম এক নজরে
+      </h1>
+
+      <p className="mt-4 max-w-[520px] text-sm leading-6 text-[#788078]">
+        চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলার দাম —
+        বাজারভিত্তিক বিস্তৃত, সঠিক, সর্বশেষ-সার্বিক এবং দামের
+        পরিবর্তন এক জায়গায়।
+      </p>
+
+      <Link
+        href="#products"
+        className="mt-6 inline-flex items-center justify-center rounded-lg bg-[#078b43] px-5 py-3 text-xs font-bold text-white shadow-md shadow-green-900/15 transition hover:bg-[#067638]"
+      >
+        সব পণ্য দেখুন
+      </Link>
+    </div>
+
+    {/* Hero Image */}
+    <div className="flex items-center justify-center">
+      <Image
+        src="/images/bazar-hero.png"
+        alt="বাজারের তাজা সবজির ঝুড়ি"
+        width={240}
+        height={200}
+        priority
+        className="h-auto w-[190px] object-contain sm:w-[220px]"
+      />
+    </div>
+  </div>
+</section>
     </main>
   );
 }
