@@ -1,4 +1,5 @@
 import { getCategory, getProductsByCategory } from "@/lib/api";
+import { toBn } from "@/lib/bangla";
 import { parseSort, sortProducts } from "@/lib/helpers";
 import EmptyState from "@/components/empty-state";
 import ProductGrid from "@/components/product-grid";
@@ -32,16 +33,29 @@ export default async function CategoryPage({ params, searchParams }: Props) {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
-      <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-        <h1 className="flex items-center gap-3 text-3xl font-extrabold text-green-950">
-          <span className="grid size-12 place-items-center rounded-xl bg-green-100 text-2xl">
-            {icon}
-          </span>
-          {title}
-        </h1>
+      <section className="flex items-center gap-4 rounded-2xl border border-green-100 bg-white p-4 sm:p-5">
+        <span className="grid size-14 shrink-0 place-items-center rounded-full bg-gray-100 text-3xl">
+          {icon}
+        </span>
+        <div>
+          <h1 className="text-2xl font-extrabold text-green-950">{title}</h1>
+          <p className="text-sm text-gray-500">
+            এই ক্যাটাগরির পণ্যের আজকের দাম
+          </p>
+        </div>
+      </section>
+
+      <div className="mt-4 flex justify-end rounded-2xl border border-green-100 bg-white p-3">
         <SortDropdown value={order} />
       </div>
-      <ProductGrid products={sortProducts(products, order)} />
+
+      <p className="mt-4 text-sm text-gray-500">
+        মোট {toBn(products.length)}টি পণ্য পাওয়া গেছে
+      </p>
+
+      <div className="mt-3">
+        <ProductGrid products={sortProducts(products, order)} />
+      </div>
     </div>
   );
 }

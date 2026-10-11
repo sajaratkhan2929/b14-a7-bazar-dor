@@ -1,0 +1,28 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import SignupForm from "@/components/signup-form";
+
+export const metadata: Metadata = { title: "সাইন আপ" };
+
+export default function SignupPage() {
+  return (
+    <div className="mx-auto max-w-md px-4 py-10 sm:py-14">
+      <h1 className="text-center text-3xl font-extrabold text-gray-900">
+        অ্যাকাউন্ট তৈরি করুন
+      </h1>
+      <p className="mt-2 text-center text-sm text-gray-600">
+        বিনামূল্যে অ্যাকাউন্ট খুলে পণ্যের বিস্তারিত দাম দেখুন।
+      </p>
+
+      <div className="mt-6">
+        <SignupForm />
+      </div>
+
+      <p className="mt-6 text-center text-sm">
+        <Link href="/" className="text-gray-600 hover:text-green-700">
+          ← হোম পেজে ফিরে যান
+        </Link>
+      </p>
+    </div>
+  );
+}
