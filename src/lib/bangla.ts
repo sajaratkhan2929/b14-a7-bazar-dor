@@ -23,7 +23,7 @@ export const unitBn = (unit: string) => UNIT_BN[unit.toLowerCase()] ?? unit;
 export const formatUnit = (unit: string) => `প্রতি ${unitBn(unit)}`;
 
 export function formatChange(change: Change) {
-  const pct = toBn(change.pct.toFixed(1));
+    const pct = toBn(Math.abs(change.pct).toFixed(1));
   if (change.dir === "up")
     return {
       tone: "up" as const,
