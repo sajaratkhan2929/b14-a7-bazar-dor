@@ -49,7 +49,9 @@ export default function AuthButtons() {
           router.push("/");
           router.refresh();
         },
-        onError: () => toast.error("সাইন আউট করা যায়নি। আবার চেষ্টা করুন।"),
+                onError: () => {
+          toast.error("সাইন আউট করা যায়নি। আবার চেষ্টা করুন।");
+        },
       },
     });
   }
