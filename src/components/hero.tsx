@@ -1,36 +1,40 @@
 import Image from "next/image";
+import BanglaDate from "./bangla-date";
 
 export default function Hero() {
   return (
-    <section className="bg-linear-to-b from-green-50 to-[#f6faf6]">
-      <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 md:grid-cols-2 md:py-16">
+    <section className="mx-auto max-w-6xl px-4 pt-6">
+      <div className="grid items-center gap-6 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 md:grid-cols-[1fr_auto] md:gap-10">
         <div>
-          <p className="mb-3 inline-block rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800">
-            আজকের বাজারদর
-          </p>
-          <h1 className="text-3xl font-extrabold leading-tight text-green-950 sm:text-4xl lg:text-5xl">
-            প্রতিদিনের বাজার দর, এক নজরে
+          <span className="inline-flex rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-800">
+            <BanglaDate />
+          </span>
+
+          <h1 className="mt-3 text-3xl font-extrabold leading-tight text-gray-900 sm:text-4xl">
+            আজকের বাজারের দাম এক নজরে
           </h1>
-          <p className="mt-4 max-w-prose text-base text-gray-600 sm:text-lg">
-            চাল, ডাল, সবজি, মাছ-মাংস — দেশের বিভিন্ন বাজারের আজকের দাম আর
-            গতকালের তুলনা এক জায়গায় দেখুন।
+
+          <p className="mt-3 max-w-xl text-base text-gray-600">
+            চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলার দাম — বাজারভিত্তিক
+            বিস্তারিত, গড়, সর্বনিম্ন-সর্বাধিক এবং দামের পরিবর্তন এক জায়গায়।
           </p>
+
           <a
             href="#সব-পণ্য"
-            className="btn mt-6 border-0 bg-green-800 text-white hover:bg-green-900 sm:btn-lg"
+            className="btn mt-6 border-0 bg-green-700 text-white shadow-md hover:bg-green-800"
           >
-            সব পণ্যের দাম দেখুন
+            সব পণ্য দেখুন
           </a>
         </div>
 
         <div className="flex justify-center md:justify-end">
           <Image
             src="/images/bazar-hero.png"
-            alt="বাজারের পণ্যের ছবি"
-            width={560}
-            height={460}
+            alt=""
+            width={320}
+            height={260}
             priority
-            className="h-auto w-full max-w-md md:max-w-full"
+            className="h-auto w-52 sm:w-60 md:w-64"
           />
         </div>
       </div>

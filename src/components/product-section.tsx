@@ -9,12 +9,6 @@ type Props = {
   tone?: "up" | "down" | "neutral";
 };
 
-const titleColor = {
-  up: "text-green-700",
-  down: "text-red-700",
-  neutral: "text-green-950",
-};
-
 export default function ProductSection({
   id,
   title,
@@ -25,7 +19,17 @@ export default function ProductSection({
   return (
     <section id={id} className="scroll-mt-52 py-8">
       <div className="mb-5">
-        <h2 className={`text-2xl font-extrabold ${titleColor[tone]}`}>
+        <h2 className="flex items-center gap-2 text-2xl font-extrabold text-black">
+          {tone === "up" && (
+            <span aria-hidden className="text-lg text-red-600">
+              ▲
+            </span>
+          )}
+          {tone === "down" && (
+            <span aria-hidden className="text-lg text-green-600">
+              ▼
+            </span>
+          )}
           {title}
         </h2>
         {subtitle && <p className="mt-1 text-gray-600">{subtitle}</p>}

@@ -36,6 +36,12 @@ const socialProviders = {
 
 export const auth = betterAuth({
   database: mongodbAdapter(db, { client }),
+    account: {
+    accountLinking: {
+      enabled: true,
+      trustedProviders: ["google", "github"],
+    },
+  },
   emailAndPassword: {
     enabled: true,
     // Sign up er por auto login na kore login page e pathabo (brief moto)

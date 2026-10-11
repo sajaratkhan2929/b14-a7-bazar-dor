@@ -1,12 +1,23 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { headers } from "next/headers";
+import { notFound, redirect } from "next/navigation";
+import { auth } from "@/lib/auth";
 import { getProductBySlug } from "@/lib/api";
 import { formatChange, formatTaka, formatUnit, toBn } from "@/lib/bangla";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export default async function ProductPage({ params }: Props) {
-  const { slug } = await params;
+    const { slug } = await params;
+
+  // Protected route: login chhara dhukle sign in page e pathao
+  const session = await auth.api.getSession({ headers: await headers() });
+  if (!session) {
+    redirect(
+      `/signin?redirect=${encodeURIComponent(`/product/${slug}`)}&protected=1`
+    );
+  }
+
   const product = await getProductBySlug(slug);
   if (!product) notFound();
 

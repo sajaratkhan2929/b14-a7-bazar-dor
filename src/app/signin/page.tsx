@@ -12,7 +12,7 @@ export default function SigninPage() {
         সাইন ইন
       </h1>
       <p className="mt-2 text-center text-sm text-gray-600">
-        আপনার অ্যাকাউন্টে ঢুকে পণ্যের বিস্তারিত দাম দেখুন।
+      বিস্তারিত দাম, বাজার তুলনা ও প্রোফাইল দেখতে অ্যাকাউন্টে ঢুকুন।
       </p>
 
       <div className="mt-6">

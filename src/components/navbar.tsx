@@ -17,13 +17,7 @@ function NavLinks({ categories }: { categories: Category[] }) {
 
   return (
     <>
-      <Link
-        href="/"
-        aria-current={pathname === "/" ? "page" : undefined}
-        className={`${base} ${pathname === "/" ? active : idle}`}
-      >
-        <span aria-hidden>🏠</span> হোম
-      </Link>
+      
       {categories.map((c) => {
         const href = `/category/${c.slug}`;
         const isActive = pathname === href;
@@ -48,14 +42,16 @@ export default function Navbar({ categories }: { categories: Category[] }) {
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex items-center justify-between gap-4 py-4">
           <Link href="/" className="flex shrink-0 items-center gap-3">
-            <Image
-              src="/images/logo-icon.png"
-              alt="বাজার দর লোগো"
-              width={56}
-              height={56}
-              priority
-              className="size-12 rounded-xl object-contain sm:size-14"
-            />
+               <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-green-600 sm:size-14">
+              <Image
+                src="/images/logo-icon.png"
+                alt="বাজার দর লোগো"
+                width={32}
+                height={32}
+                priority
+                className="size-6 object-contain sm:size-7"
+              />
+            </span>
             <span className="leading-tight">
               <span className="block text-xl font-extrabold text-gray-900 sm:text-2xl">
                 বাজার দর

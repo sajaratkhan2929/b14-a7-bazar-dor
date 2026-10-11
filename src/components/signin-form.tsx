@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { signIn } from "@/lib/auth-client";
 import SocialButtons from "./social-buttons";
@@ -12,6 +12,15 @@ export default function SigninForm() {
   const params = useSearchParams();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  
+  // Protected page theke redirect hoye ashle toast dekhao
+  const isProtected = params.get("protected");
+  useEffect(() => {
+    if (isProtected) {
+      toast.error("এই পেজ দেখতে আগে সাইন ইন করুন।", { id: "protected" });
+    }
+  }, [isProtected]);
 
   // Protected page theke ashle login er por sei page e pathabo
   const redirect = params.get("redirect");

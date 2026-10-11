@@ -11,21 +11,21 @@ export default async function HomePage() {
       <Hero />
       <div className="mx-auto max-w-6xl px-4">
         <ProductSection
-          title="আজ দাম বেড়েছে ▲"
-          subtitle="গতকালের তুলনায় সবচেয়ে বেশি দাম বেড়েছে যেসব পণ্যের"
+          title="আজ দাম বেড়েছে "
+          
           products={topRisers(products)}
           tone="up"
         />
         <ProductSection
-          title="আজ দাম কমেছে ▼"
-          subtitle="গতকালের তুলনায় সবচেয়ে বেশি দাম কমেছে যেসব পণ্যের"
+          title="আজ দাম কমেছে"
+          
           products={topFallers(products)}
           tone="down"
         />
         <ProductSection
           id="সব-পণ্য"
           title="সব পণ্য"
-          subtitle="সব পণ্যের আজকের গড় দাম আর গতকালের তুলনায় পরিবর্তন"
+          subtitle="মোট ৩৩টি পণ্য দেখানো হচ্ছে"
           products={products}
         />
       </div>

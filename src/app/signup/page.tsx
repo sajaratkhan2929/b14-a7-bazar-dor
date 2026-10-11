@@ -11,7 +11,7 @@ export default function SignupPage() {
         অ্যাকাউন্ট তৈরি করুন
       </h1>
       <p className="mt-2 text-center text-sm text-gray-600">
-        বিনামূল্যে অ্যাকাউন্ট খুলে পণ্যের বিস্তারিত দাম দেখুন।
+        বিনা খরচে সাইন আপ করে সব বিস্তারিত দাম দেখুন।
       </p>
 
       <div className="mt-6">
