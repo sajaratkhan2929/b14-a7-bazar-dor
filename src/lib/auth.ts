@@ -2,7 +2,7 @@ import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import { MongoClient } from "mongodb";
 
-// Dev e hot reload hole bar bar notun connection na khule ekta-i use kora hoy
+// In dev, hot reload reuses one connection instead of opening new ones
 const globalForMongo = globalThis as unknown as { mongoClient?: MongoClient };
 
 const client =
@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const db = client.db();
 
-// Google / GitHub key na thakle oi provider chalu hobe na (app crash korbe na)
+// If Google / GitHub keys are missing, that provider is skipped (app won't crash)
 const socialProviders = {
   ...(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET
     ? {
@@ -36,7 +36,13 @@ const socialProviders = {
 
 export const auth = betterAuth({
   database: mongodbAdapter(db, { client }),
-    account: {
+  baseURL: process.env.BETTER_AUTH_URL,
+  trustedOrigins: [
+    "http://localhost:3000",
+    "https://b14-a7-bazar-dor-sigma.vercel.app",
+    "https://*.vercel.app",
+  ],
+  account: {
     accountLinking: {
       enabled: true,
       trustedProviders: ["google", "github"],
@@ -44,7 +50,7 @@ export const auth = betterAuth({
   },
   emailAndPassword: {
     enabled: true,
-    // Sign up er por auto login na kore login page e pathabo (brief moto)
+    // After sign up, go to the sign in page instead of auto login (as the brief says)
     autoSignIn: false,
   },
   socialProviders,
