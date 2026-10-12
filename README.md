@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# 🛒 বাজার দর (BazarDor)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📖 Description
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**বাজার দর (BazarDor)** একটি গ্রোসারি প্রাইস ট্র্যাকার ওয়েব অ্যাপ। এখানে চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম-দুধ ও মসলার আজকের দাম, গতকালের তুলনায় দামের পরিবর্তন এবং দেশের বিভিন্ন বাজারের আলাদা দাম এক জায়গায় দেখা যায়।
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🔗 **Live:** https://b14-a7-bazar-dor-sigma.vercel.app
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| **Next.js** 
+| **TypeScript** 
+| **Tailwind CSS + DaisyUI** 
+| **BetterAuth** 
+| **MongoDB Atlas** 
+| **react-hot-toast** 
+| **Vercel** 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ✨ 5 Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**লাইভ প্রাইস টিকার** - নেভবারের নিচে অনন্ত স্ক্রলিং স্ট্রিপে প্রতিটি পণ্যের দাম ও ▲/▼ পরিবর্তনের হার 
+
+**আজকের বাজার সারসংক্ষেপ** - "দাম বেড়েছে" ও "দাম কমেছে" এর টপ ৬টি পণ্য এবং সব পণ্যের রেসপন্সিভ কার্ড গ্রিড 
+
+**ক্যাটাগরি পেজ ও সর্টিং** - ক্যাটাগরি অনুযায়ী পণ্য, দাম অনুযায়ী সাজানো
+
+**বাজারভিত্তিক দামের বিস্তারিত** - পণ্য পেজে সর্বনিম্ন, সর্বোচ্চ ও গড় দাম এবং প্রতিটি বাজারের দামের টেবিল 
+
+**অথেন্টিকেশন ও প্রোফাইল** - ইমেইল/পাসওয়ার্ড, Google ও GitHub লগইন, প্রোটেক্টেড রুট এবং প্রোফাইল থেকে নাম আপডেট 
+
+
